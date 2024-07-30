@@ -1,7 +1,9 @@
-from django.shortcuts import render
-from django.http import JsonResponse
-# from .models import Car
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+
+
+@api_view(['GET'])
 def index(req):
-    return JsonResponse('hello', safe=False)
+    return Response('hello')
 
 
